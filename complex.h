@@ -13,12 +13,13 @@ complex ();
   complex sub(const complex& rhs) const;
  complex div(const complex& rhs) const;
 
+  void read(std::istream& is);
+  void write(std::ostream& os) const;
 
 double get(int i);
-double per(int i);
-double pir(int i);
+double cosi()const;
+double sini()const;
 void set(double x,double y);
-void read(int i);
 
 private:
   double arr[2];

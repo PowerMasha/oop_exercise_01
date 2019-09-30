@@ -6,13 +6,9 @@ int main(){
 	complex m1;
 	complex m2;
 printf("Введите первое комплексное число\n");
-  for(int i = 0; i < 2; ++i){
-    m1.read(i);
-    } 
+    m1.read(std::cin);
 printf("Введите второе комплексное число\n");
-  for(int i = 0; i < 2; ++i){
-    m2.read(i);
-    } 
+    m2.read(std::cin);
 printf("Первое комплексное число, модуль длины (r)  угол (u)\n");
   for(int i = 0; i < 2; ++i){
     std::cout << m1.get(i)<<' ';
@@ -24,33 +20,17 @@ printf("Второе комплексное число, модуль длины 
     }
 std::cout << '\n';
 //SUMMA
-complex res1(0,0);
-complex res2(0,0);
-double X1=m1.per(1);
-double X2=m2.per(1);
-double Y1=m1.pir(1);
-double Y2=m2.pir(1);
-if(X1!=0 && Y1!=0){res1.set(m1.get(0)/X1,m1.get(0)/Y1);}else{
-	if(X1==0){res1.set(0,m1.get(0)/Y1);} else {
-		res1.set(m1.get(0)/X1,0);	
-	}
-}
-if(X2!=0 && Y2!=0){res2.set(m2.get(0)/X2,m2.get(0)/Y2);}else{
-	if(X2==0){res2.set(0,m2.get(0)/Y2);} else {
-		res2.set(m2.get(0)/X2,0);	
-	}
-}
-complex sum = res1.add(res2);
+complex sum = m1.add(m2);
 std::cout <<'\n';
 std::cout << "Координаты вектора суммы:\n";
 for(int i = 0; i < 2; ++i){
  std::cout.setf(std::ios::fixed);
  std::cout.precision(2);
-  std::cout <<sum.get(i) << ' ';
+ std::cout<<sum.get(i) << ' ';
   		 }	    
 std::cout <<'\n';
 //Raznost
-complex sub = res1.sub(res2);
+complex sub = m1.sub(m2);
 std::cout<<'\n';
 
 std::cout << "Координаты вектора разности:\n";
