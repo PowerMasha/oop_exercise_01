@@ -10,9 +10,12 @@ double complex::get(int i) {
   return arr[i];
 }
 void complex::set(double x,double y) {arr[0]=x;arr[1]=y;}
-void complex::read(std::istream& is){
+void complex::read(std::istream& is) {
 for (int i=0; i<2; ++i){
 	is >> arr[i];}
+}
+void complex::write(std::ostream& os) {
+	os << arr[0] <<"*(cos("<< arr[1] <<")+i*sin("<< arr[1] <<")";
 }
 double complex::cosi()const{
 double k;

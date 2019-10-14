@@ -10,16 +10,11 @@ printf("Введите первое комплексное число\n");
 printf("Введите второе комплексное число\n");
     m2.read(std::cin);
 printf("Первое комплексное число, модуль длины (r)  угол (u)\n");
-  for(int i = 0; i < 2; ++i){
-    std::cout << m1.get(i)<<' ';
-    } 
+  m1.write(std::cout);
 std::cout << '\n';
 printf("Второе комплексное число, модуль длины (r)  угол (u)\n");
-  for(int i = 0; i < 2; ++i){
-    std::cout << m2.get(i)<<' ';
-    }
+  m2.write(std::cout);
 std::cout << '\n';
-std::cout <<'\n';
 
 std::cout << "Длина и угол(в радианах) вектора суммы:\n";
 complex sum = m1.add(m2);
