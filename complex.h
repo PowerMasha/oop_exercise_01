@@ -16,7 +16,7 @@ complex ();
 complex sopr();
 
   void read(std::istream& is);
-  void write(std::ostream& os);
+  void write(std::ostream& os) const;
 
 double get(int i);
 double cosi()const;

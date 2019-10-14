@@ -16,44 +16,37 @@ printf("Второе комплексное число, модуль длины 
   m2.write(std::cout);
 std::cout << '\n';
 
-std::cout << "Длина и угол(в радианах) вектора суммы:\n";
+printf("Длина и угол(в радианах) вектора суммы:\n");
 complex sum = m1.add(m2);
-for(int i = 0; i < 2; ++i){
- std::cout<<sum.get(i) << ' ';
-  }	    
+sum.write(std::cout);	    
 std::cout <<'\n';
-std::cout << "Длина и угол(в радианах) вектора разности:\n";
+
+printf("Длина и угол(в радианах) вектора разности:\n");
 complex sub = m1.sub(m2);
-for(int i = 0; i < 2; ++i){
-
-  std::cout <<sub.get(i) << ' ';
-  		 }	    
+sub.write(std::cout);
+  		 	    
 std::cout <<'\n';
 
-  std::cout << "Произведение: \n";
-   m1.multiply(m2);
-  
+printf("Произведение: \n");
+   m1.multiply(m2); 
 std::cout << '\n';
 
-std::cout << "Деление :\n";
+printf("Деление :\n");
 	m1.div(m2);
   
 std::cout << '\n';
-std::cout << "Сравнение комплексных чисел по длине вектора и углу:\n";
+printf("Сравнение комплексных чисел по длине вектора и углу:\n");
 	m1.equ(m2);
 	
 std::cout << '\n';
-std::cout << "sopr_m1:\n";
+printf("sopr_m1:\n");
 complex sm1=m1.sopr();
-  for(int i = 0; i < 2; ++i){
- std::cout<<sm1.get(i)<<' ';
-    }
+  sm1.write(std::cout);
 
 std::cout << '\n';
-std::cout << "sopr_m2:\n";
+printf("sopr_m2:\n");
 complex sm2=m2.sopr();
-  for(int i = 0; i < 2; ++i){
-      std::cout<<sm2.get(i)<<' ';
-    }
+	sm2.write(std::cout);
 std::cout << '\n';
+
 }
