@@ -19,70 +19,46 @@ printf("Второе комплексное число, модуль длины 
     std::cout << m2.get(i)<<' ';
     }
 std::cout << '\n';
-//SUMMA
-complex sum = m1.add(m2);
 std::cout <<'\n';
-std::cout << "Координаты вектора суммы:\n";
-for(int i = 0; i < 2; ++i){
- std::cout.setf(std::ios::fixed);
- std::cout.precision(2);
- std::cout<<sum.get(i) << ' ';
-  		 }	    
-std::cout <<'\n';
-//Raznost
-complex sub = m1.sub(m2);
-std::cout<<'\n';
 
-std::cout << "Координаты вектора разности:\n";
+std::cout << "Длина и угол(в радианах) вектора суммы:\n";
+complex sum = m1.add(m2);
+for(int i = 0; i < 2; ++i){
+ std::cout<<sum.get(i) << ' ';
+  }	    
+std::cout <<'\n';
+std::cout << "Длина и угол(в радианах) вектора разности:\n";
+complex sub = m1.sub(m2);
 for(int i = 0; i < 2; ++i){
 
   std::cout <<sub.get(i) << ' ';
   		 }	    
 std::cout <<'\n';
-std::cout.setf(std::ios::fixed);
- std::cout.precision(0);
-	complex product = m1.multiply(m2);
+
   std::cout << "Произведение: \n";
-  for(int i = 0; i < 2; ++i){
-      if(i==0){std::cout << product.get(i) << "*";}
-	if(i==1){std::cout <<"(cos("<< product.get(i) << ")+i*sin("<< product.get(i) << "))";}
-    }
+   m1.multiply(m2);
   
 std::cout << '\n';
 
- complex del = m1.div(m2);
-  std::cout << "Деление :\n";
-  for(int i = 0; i < 2; ++i){
-      if(i==0){std::cout << del.get(i) << "*";}
-	if(i==1){std::cout <<"(cos("<< del.get(i) << ")+i*sin("<< del.get(i) << "))";}
-    }
+std::cout << "Деление :\n";
+	m1.div(m2);
   
 std::cout << '\n';
 std::cout << "Сравнение комплексных чисел по длине вектора и углу:\n";
-int k=0;
-int l=0;
-for(int i = 0; i < 2; ++i){
-    if (m1.get(i)==m2.get(i) && i==0){k=1;} else {k=0;}
-     if (m1.get(i)==m2.get(i) && i==1){l=1;} else {l=0;}
-}
-  
-
-if(k==1){std::cout << "Длины равны\n";} else {std::cout << "Длины не равны\n";}
-if(l==1){std::cout << "Углы равны\n";} else {std::cout << "Углы не равны\n";}
+	m1.equ(m2);
 	
-complex res3(0,0);
-complex res4(0,0);
-res3.set(m1.get(0),(-1)*m1.get(1));
-res4.set(m2.get(0),(-1)*m2.get(1));
 std::cout << '\n';
 std::cout << "sopr_m1:\n";
+complex sm1=m1.sopr();
   for(int i = 0; i < 2; ++i){
-      std::cout << res3.get(i) <<' ';
+ std::cout<<sm1.get(i)<<' ';
     }
+
 std::cout << '\n';
 std::cout << "sopr_m2:\n";
+complex sm2=m2.sopr();
   for(int i = 0; i < 2; ++i){
-      std::cout << res4.get(i) <<' ';
+      std::cout<<sm2.get(i)<<' ';
     }
 std::cout << '\n';
 }

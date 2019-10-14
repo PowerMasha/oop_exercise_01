@@ -12,6 +12,8 @@ complex ();
   complex multiply(const complex& rhs) const; 
   complex sub(const complex& rhs) const;
  complex div(const complex& rhs) const;
+ void equ(const complex& rhs) const;
+complex sopr();
 
   void read(std::istream& is);
   void write(std::ostream& os) const;
