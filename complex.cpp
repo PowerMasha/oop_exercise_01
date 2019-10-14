@@ -60,7 +60,7 @@ complex complex::multiply(const complex& rhs) const {
   complex result{0,0};
        result.arr[0] = arr[0]*rhs.arr[0];
 	result.arr[1] = arr[1]+ rhs.arr[1];
-std::cout << result.arr[0]<<"*(cos("<<result.arr[1]<<")+i*sin("<<result.arr[1]<<"))";
+
 return result;
 }
 
@@ -68,7 +68,7 @@ complex complex::div(const complex& rhs) const {
   complex result{0,0};
  if (rhs.arr[0]!=0) {result.arr[0] =(arr[0])/rhs.arr[0];}
 	result.arr[1] = arr[1] - rhs.arr[1];
-std::cout << result.arr[0]<<"*(cos("<<result.arr[1]<<")+i*sin("<<result.arr[1]<<"))";
+
 return result;
 }
 void complex::equ(const complex& rhs) const {

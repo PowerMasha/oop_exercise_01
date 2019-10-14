@@ -28,11 +28,11 @@ sub.write(std::cout);
 std::cout <<'\n';
 
 printf("Произведение: \n");
-   m1.multiply(m2); 
+   m1.multiply(m2).write(std::cout); 
 std::cout << '\n';
 
 printf("Деление :\n");
-	m1.div(m2);
+	m1.div(m2).write(std::cout);
   
 std::cout << '\n';
 printf("Сравнение комплексных чисел по длине вектора и углу:\n");
